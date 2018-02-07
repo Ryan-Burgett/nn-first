@@ -144,16 +144,19 @@ fig = plt.plot(costs)
 
 #predicts what the Mystery flower is.
 
-z = w1 * mystery_flower[0] + w2 * mystery_flower[1]+b
-pred = sigmoid(z)
+def test(flower):
 
-if(pred >= .5):
-    print(pred)
-    print("The Flower is Red")
-else:
-    print(pred)
-    print("The Flower is Blue")
+    z = w1 * flower[0] + w2 * flower[1] + b
+    pred = sigmoid(z)
 
+    if(pred >= .5):
+        print(pred)
+        print("The Flower is Red")
+    else:
+        print(pred)
+        print("The Flower is Blue")
+
+test(mystery_flower)
 
 # In[10]:
 
